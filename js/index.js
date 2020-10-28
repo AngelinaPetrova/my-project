@@ -4,11 +4,6 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
 
-let nightMode = document.getElementById('night-mode');
-nightMode.addEventListener('click', nightPressed);
-function nightPressed() {
-    alert('vfvfv');
-}
 
 // Show input error message
 function showError(input, message) {
@@ -85,3 +80,20 @@ form.addEventListener('submit', function(e) {
   checkPasswordsMatch(password, password2);
 });
 
+
+const nightMode = document.getElementById('night-mode');
+let mode = false;
+nightMode.addEventListener('click', nightPressed);
+function nightPressed() {
+    if (mode == false) {
+        mode = true;
+        document.querySelector('body').style.backgroundColor = '#13111d';
+        document.querySelector('.container').style.backgroundColor = '#3d3c3c';
+        document.querySelector('.password2 password email username').style.backgroundColor = '#000';
+    } else {
+        mode = false;
+        document.querySelector('body').style.backgroundColor = '#f9fafb';
+        document.querySelector('.container').style.backgroundColor = '#fff';
+        document.querySelector('.password2 password email username').style.backgroundColor = '#777';
+    }
+}

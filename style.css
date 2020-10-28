@@ -107,6 +107,8 @@ h2 {
     right: 80px;
     bottom: 40px;
     transition: .25s;
+    text-align: center;
+    padding-top: 10px;
 }
 #night-mode:hover {
     transform: scale(1.2);
